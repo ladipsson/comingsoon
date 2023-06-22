@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  --dRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+  --darkGrayRed: hsl(0, 6%, 24%);
+  --gradient1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+.hero-mobile {
+  display: none;
+}
+
+body {
+  width: 100vw;
+  position: relative;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 75vw;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  background-image: url(/images/bg-pattern-desktop.svg);
+}
+
+.card-content {
+  width: 62%;
+  margin: 0 auto;
+  margin-top: 11rem;
+}
+
+.card-content h1 {
+  font-size: 3.4rem;
+  font-weight: 300;
+  color: var(--dRed);
+  text-transform: uppercase;
+  letter-spacing: 0.9rem;
+}
+
+.card-content h2 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+  line-height: 4rem;
+  color: var(--darkGrayRed);
+  margin-bottom: 1.3rem;
+}
+
+.hero-desktop {
+  width: 500px;
+}
+
+.logo {
+  margin-bottom: 6rem;
+  position: absolute;
+  left: 21rem;
+  top: 3rem;
+}
+
+.card-content .content {
+  line-height: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--dRed);
+}
+
+form {
+  position: relative;
+  margin: 0 auto;
+}
+
+input[type="email"] {
+  padding: 15px 90px 15px 15px;
+  font-size: 1.2rem;
+  border: 1px solid var(--dRed);
+  border-radius: 40px;
+  width: 100%;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--dRed);
+  padding-left: 1rem;
+}
+
+form button {
+  position: absolute;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: #fff;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 3px 6px 15px hsla(0, 36%, 70%, 0.7);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+form button:hover {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+}
+
+label {
+  position: absolute;
+  right: 109px;
+  top: 13px;
+  display: none;
+}
+.error-msg {
+  display: none;
+  color: var(--dRed);
+  font-size: 14px;
+  margin-top: 0.8rem;
+  margin-left: 2rem;
+}
+
+@media screen and (min-width: 375px) and (max-width: 420px) {
+  .hero-desktop {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: block;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    max-width: 100vw;
+    margin-top: 0;
+  }
+  .card-content {
+    width: 80%;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .card-content h1 {
+    font-size: 2rem;
+  }
+  
+  .card-content h2 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+  .card-content .content {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+  .logo {
+    position: static;
+    margin-bottom: 0;
+    padding: 1rem 0;
+    margin-left: 2rem;
+  }
+  .logo .logo-img {
+    width: 110px;
+  }
+  .surplus {
+    margin-bottom: 3rem;
+  }
+  input[type="email"] {
+    font-size: 1rem;
+    padding: 10px 80px 10px 10px;
+  }
+  
+  input::placeholder {
+    color: var(--dRed);
+    padding-left: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  button {
+    position: absolute;
+    width: 60px;
+    padding: 10px 10px;
+  }
+  .error-msg p {
+    text-align: left;
+  }
+}
